@@ -7,6 +7,10 @@ const {
 } = require("../middlewares/globalErrHandler");
 const app = express();
 
+app.get("/", (req, res) => {
+  res.status(200).json({ message: "Welcome to the API!" });
+});
+
 const cors = require('cors');
 
 // CORS
